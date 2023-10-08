@@ -1,0 +1,25 @@
+name: DevCareer CICD
+on:
+  push:
+    branches:
+        - main 
+
+  pull_request:
+    branches:
+        - main
+
+jobs:
+  Test:
+    name: Run test for Github Action
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Print Hello World
+        run: echo Hello world
+
+      - name: Execute multiple command 
+        run: |
+            echo Hello World
+            echo From the second line
+
